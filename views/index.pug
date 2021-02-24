@@ -7,7 +7,7 @@ block content
     label#login-field.mdc-text-field.mdc-text-field--filled.mdc-text-field--no-label
       span.mdc-text-field__ripple
       i.material-icons.mdc-text-field__icon.mdc-text-field__icon--trailing(tabindex='0' role='button') face
-      input.mdc-text-field__input(type='text' placeholder='nick' aria-label='Label')
+      input#name.mdc-text-field__input(type='text' placeholder='nick' aria-label='Label')
       span.mdc-line-ripple
-    button#login-button.mdc-button.mdc-button--raised(onclick="move(\""+'chat'+"\")")
+    button#login-button.mdc-button.mdc-button--raised(onclick="login(document.getElementById('name').value)")
       span.mdc-button__label CHAT

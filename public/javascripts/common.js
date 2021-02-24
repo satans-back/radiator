@@ -1,3 +1,9 @@
-function move(dest) {
-    window.location.href = '/' + dest;
+var nick = '';
+
+function login(nick) {
+    window.location.href = '/chat';
+}
+
+function setNick(nick) {
+    document.getElementById('welcome-header').innerHTML = "Welcome " + nick + "!";
 }
