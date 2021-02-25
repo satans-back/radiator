@@ -1,34 +1,38 @@
 extends layout
 
+append head
+  script(src='/javascripts/chatroom.js')
 block content
   header.mdc-top-app-bar
     .mdc-top-app-bar__row
       section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-start
-        button.material-icons.mdc-top-app-bar__navigation-icon.mdc-icon-button(aria-label='Open navigation menu') menu
         span#welcme-header.mdc-top-app-bar__title Welcome
         section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-end(role='toolbar')
           button.material-icons.mdc-top-app-bar__action-item.mdc-icon-button(aria-label='Options') more_vert
   main.mdc-top-app-bar--fixed-adjust
-  aside.mdc-drawer.full-height
+  aside#nav-draw.mdc-drawer
     .mdc-drawer__content
+      h5.section-title chat rooms
       nav.mdc-list
-        a.mdc-list-item.mdc-list-item--activated(href='#' aria-current='page')
+        a#room-iron.mdc-list-item.mdc-list-item--activated(href='#' onclick='changeRoom(this.id)')
           span.mdc-list-item__ripple
           i.material-icons.mdc-list-item__graphic(aria-hidden='true') table_rows
           span.mdc-list-item__text cast iron
-        a.mdc-list-item(href='#')
+        a#room-aluminium.mdc-list-item(href='#' onclick='changeRoom(this.id)')
           span.mdc-list-item__ripple
           i.material-icons.mdc-list-item__graphic(aria-hidden='true') table_chart
           span.mdc-list-item__text aluminium
-        a.mdc-list-item(href='#')
+        a#room-floor.mdc-list-item(href='#' onclick='changeRoom(this.id)')
           span.mdc-list-item__ripple
           i.material-icons.mdc-list-item__graphic(aria-hidden='true') gradient
           span.mdc-list-item__text floor heating
-        a.mdc-list-item(href='#')
+        a#room-steel.mdc-list-item(href='#' onclick='changeRoom(this.id)')
           span.mdc-list-item__ripple
           i.material-icons.mdc-list-item__graphic(aria-hidden='true') trip_origin
           span.mdc-list-item__text steel
-        a.mdc-list-item(href='#')
+        a#room-canal.mdc-list-item(href='#' onclick='changeRoom(this.id)')
           span.mdc-list-item__ripple
           i.material-icons.mdc-list-item__graphic(aria-hidden='true') arrow_circle_down
           span.mdc-list-item__text canal
+  div#chat
+    include room

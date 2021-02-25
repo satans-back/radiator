@@ -1,7 +1,19 @@
+/* MATERIAL OVERRIDE */
+
 :root {
   --mdc-theme-primary: #f75e24;
   --mdc-theme-secondary: #7a7a7a;
 }
+
+.mdc-drawer .mdc-list-item--activated {
+  color: black;
+}
+
+.mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
+  color: #f75e24;
+}
+
+/* CUSTOM */
 
 html {
   overflow: hidden;
@@ -19,15 +31,32 @@ a {
 }
 
 h6 {
-  font-family: 'Roboto' sans-serif;
+  font-family: 'Roboto';
   font-weight: medium;
   font-size: 20px;
   margin: 0;
   margin-bottom: 20px;
 }
 
-.full-height {
+h5 {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#nav-draw {
   min-height: 100vh;
+  float: left;
+  background-color: #EBEBEB;
 }
 
 #logo-main {
@@ -50,4 +79,32 @@ h6 {
 #login-field {
   width: 100%;
   margin-bottom: 20px;
+}
+
+#chat {
+  width: auto;
+  overflow: hidden;
+  background-color: white;
+  min-height: 100vh;
+  position: relative;
+}
+
+#message-field {
+  max-height: 60px;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#message-div {
+  height: 60px;
+  width: 100%;
+  bottom: 10px;
+  right: 15px;
+}
+
+#send-bttn {
+  right: 23px;
+  bottom: 27px;
 }

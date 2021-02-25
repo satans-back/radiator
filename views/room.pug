@@ -1,0 +1,9 @@
+block room
+  ul#messages
+  div#message-div
+    label#message-field.mdc-text-field.mdc-text-field--filled.mdc-text-field--textarea.mdc-text-field--no-label
+      span.mdc-text-field__ripple
+      form#chatForm(action='/' method='POST')
+        textarea.mdc-text-field__input(aria-label='Label')
+      //i#send-bttn.material-icons send
+      span.mdc-line-ripple
